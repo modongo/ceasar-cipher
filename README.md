@@ -8,13 +8,13 @@ This java application allows a user to enter a string and a key to apply on the 
 
 ## Specs
  
-| Behaviour     | Example Input | Example Output  |
+| Behaviour     |  User Input | Expected Output  |
 | ------------- | ------------- | ------------- |
-| A single character should shift forward by the number of the shift key   | "C",4  | "g"  |
-| Each character in a word should shift forward by the number of the shift key  | "cat",2  | "ecv"  |
+| A single character should shift forward by the number of the shift key   | "A",4  | "g"  |
+| Each character in a word should shift forward by the number of the shift key  | "raven",4  | "vezir"  |
 | Numerical Inputs fail  | "1",1 | "Error invalid message"  |
-| Spaces and punctuation marks should not be encrypted  | "?",2  | "?"  |
-| Each character in a sentence should shift forward by the number of the shift key  | "I am happy",2  | "K co jcrra"  |
+| Spaces and punctuation marks should not be encrypted  | "T",2  | "v"  |
+| Each character in a sentence should shift forward by the number of the shift key  | "Superman",3  | "vxshupdq"  |
 | Shift key must be numerical  | "A","f"  | Throws error and starts program  |
 | Shift key must be in range 1-25  | "A",50  | Asks for input again  |
 | Return nothing when empty string is submitted  | "",2  | ""  |
