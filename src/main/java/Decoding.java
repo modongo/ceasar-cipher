@@ -29,7 +29,7 @@ public class Decoding
 }
  public boolean setKey(Integer key) {
      if (key == (int) key) {
-         if (key <= 25) {
+         if (key <= 0 ||key <= 25) {
              this.mKey = key;
              return true;
          } else {
