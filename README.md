@@ -12,7 +12,7 @@ This java application allows a user to enter a string and a key to apply on the 
 | ------------- | ------------- | ------------- |
 | A single character should shift forward by the number of the shift key   | "A",2  | "C"  |
 | Each character in a word should shift forward by the number of the shift key  | "cat",2  | "ecv"  |
-| Numerical strings are not encrypted  | "1",1  | "1"  |
+| Numerical Inputs fail  | "1",1 | "Error invalid message"  |
 | Spaces and punctuation marks should not be encrypted  | "?",2  | "?"  |
 | Each character in a sentence should shift forward by the number of the shift key  | "I am happy",2  | "K co jcrra"  |
 | Shift key must be numerical  | "A","f"  | Throws error and starts program  |
