@@ -10,7 +10,7 @@ This java application allows a user to enter a string and a key to apply on the 
  
 | Behaviour     | Example Input | Example Output  |
 | ------------- | ------------- | ------------- |
-| A single character should shift forward by the number of the shift key   | "A",2  | "C"  |
+| A single character should shift forward by the number of the shift key   | "C",4  | "g"  |
 | Each character in a word should shift forward by the number of the shift key  | "cat",2  | "ecv"  |
 | Numerical Inputs fail  | "1",1 | "Error invalid message"  |
 | Spaces and punctuation marks should not be encrypted  | "?",2  | "?"  |
