@@ -10,12 +10,12 @@ public class App {
                 //Section for User entry for encode
                     System.out.println("                                       ");
                    System.out.println("                                       ");
-                    System.out.println("<<<< Enter a Plaintext you want to encrypt: >>>>  ");
+                    System.out.println("<<<< Enter a Plaintext message you want to encrypt: >>>>  ");
                     String plaintext = mSc.readLine();
 
                do {
                    System.out.println("                                       ");
-                   System.out.println("<<<<  Enter encrypted key: >>>>>  ");
+                   System.out.println("<<<<  Enter encryption key: >>>>>  ");
                    String mKey = mSc.readLine();
                    key = Integer.parseInt(mKey);
                } while ( key < 0 || key > 25);
@@ -71,7 +71,7 @@ public class App {
                 } else {
                     System.out.println("                                       ");
                     System.out.println("                                       ");
-                    System.out.println("Original:>>>>>> "+ decode.getmDecrypted_Message()+" <<<<<<");
+                    System.out.println("Original Msg: >> "+ decode.getmDecrypted_Message()+" << ");
                     System.out.println("                                       ");
                     System.out.println("                                       ");
                     System.out.println("                 Thanks & Bye!!                      ");
