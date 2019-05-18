@@ -1,4 +1,4 @@
-## Project Name: _Ceaser Cipher_
+## Project Name: _Caeser Cipher_
 
 #### Author: Michael Odongo
 
