@@ -38,30 +38,14 @@ public class App {
         key = Integer.parseInt(mKey);
 
         Decoding decode = new Decoding(ciphertext,key);
-      try {
-          if(decode.setCodedText(ciphertext)){
-              if(decode.setKey(key)){
-                  decode.doDecode(ciphertext,key);
-                  System.out.println("The original Message was: " + decode.getmDecrypted_Message());
-              } else{
-                  System.out.println("Invalid key.");
-                  //Break
-                  System.out.println("...Please start again.");
-                  Runtime.getRuntime().halt(0);
-
-              }
-          } else {
-
-              System.out.println("Invalid crypt. Your crypt must contain alphabetical letters only");
-              System.out.println("...Please start again.");
-              Runtime.getRuntime().halt(0);
-          }
-      }catch (Exception e){
-          System.out.println("An error occured. Please  try again.");
-      }
-
-
-
+        decode.setCodedText(ciphertext);
+        decode.setKey(key);
+        decode.doDecode(ciphertext,key);
+        if(decode.getmDecrypted_Message().equals(ciphertext)){
+            System.out.println("Your message was never encrypted. ");
+        }else {
+            System.out.println("The original Message was: " + decode.getmDecrypted_Message());
+        }
 
     }
 }

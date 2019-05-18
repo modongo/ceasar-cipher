@@ -13,32 +13,14 @@ public class Decoding
  }
 
 
-    public Boolean setCodedText(String codedText){
-       // this.mCipherText = codedText;
-        if (!codedText.equals("")) {
+    public void setCodedText(String codedText){
+       // setter
+        this.mCipherText = codedText;
 
-            if (codedText != null){
+ }
 
-                if(codedText.matches("[a-zA-Z]+")) {
-                    this.mCipherText = codedText;
-                    return true;
-                }
-            }
-        }
-        return false;
-
-}
- public boolean setKey(Integer key) {
-     if (key == (int) key) {
-         if (key <= 0 ||key <= 25) {
-             this.mKey = key;
-             return true;
-         } else {
-             return false;
-         }
-     } else {
-         return false;
-     }
+ public void setKey(Integer key) {
+     this.mKey = key;
  }
  public String getmDecrypted_Message(){
         return mDecrypted_Message;
