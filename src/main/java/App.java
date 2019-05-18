@@ -1,5 +1,4 @@
 import java.io.Console;
-import java.lang.Character;
 
 public class App {
     public static void main(String[] args) {
@@ -38,7 +37,7 @@ public class App {
                     System.out.println("<<<    No Encryption done:   >>>  " + encode.getCrypt());
                     System.out.println("                                       ");
                 } else {
-                    System.out.println("<<<    The Crypt is :   >>>  " + encode.getCrypt());
+                    System.out.println("The cipher is :>>>> " +encode.getCrypt()+" <<<<");
 
                 }
 
@@ -47,6 +46,7 @@ public class App {
                 System.out.println("                                       ");
                 System.out.println("               LET'S NOW DECRYPT                        ");
                 System.out.println("Enter an encrypted message you want to decrypt: ");
+                System.out.println("                                       ");
                 System.out.println("                                       ");
                 String ciphertext = mSc.readLine();
 
@@ -71,7 +71,7 @@ public class App {
                 } else {
                     System.out.println("                                       ");
                     System.out.println("                                       ");
-                    System.out.println("The original Message was: " + decode.getmDecrypted_Message());
+                    System.out.println("Original:>>>>>> "+ decode.getmDecrypted_Message()+" <<<<<<");
                     System.out.println("                                       ");
                     System.out.println("                                       ");
                     System.out.println("                 Thanks & Bye!!                      ");
