@@ -21,7 +21,12 @@ public class App {
         encode.setKey(key);
         encode.doEncode();
         //display the crypt
-        System.out.println(" The Crypt is: " +encode.getCrypt());
+
+        if(encode.getCrypt().equals(plaintext)){
+            System.out.println(" No Encryption done: " +encode.getCrypt());
+        }else{
+            System.out.println(" The Crypt is: " +encode.getCrypt());
+        }
 
 
         /**Section for User entry for decode**/
