@@ -1,9 +1,10 @@
+import java.lang.Character;
 public class Decoding
 {
     private String mCipherText;
     private String mDecrypted_Message;
     private  Integer mKey;
-    private  char mAlphabet;
+    private  Character mAlphabet;
 
  public Decoding(String cipherText,Integer key){
      this.mCipherText = cipherText;
@@ -43,14 +44,16 @@ public class Decoding
         return mDecrypted_Message;
  }
 
-    public String doDecode(){
+    public String doDecode(String crypt,Integer mKey){
 
         mCipherText = mCipherText.toLowerCase();
         mDecrypted_Message="";
 
         for(int i = 0; i < mCipherText.length(); ++i){
 
+
             mAlphabet = mCipherText.charAt(i);
+
 
             if(mAlphabet >= 'a' && mAlphabet <= 'z'){
 

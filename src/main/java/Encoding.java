@@ -1,32 +1,20 @@
+import java.lang.Character;
 public class Encoding {
     private String mPlaintext;
     private  String mEncrypted_Message;
     private int mKey;
-    private  char mAlphabet;
+    private  Character mAlphabet;
+    private Character mEncyptedChar;
 public Encoding(String plaintext,Integer key){
     this.mPlaintext = plaintext;
     this.mKey = key;
 }
 
     //setter
-    public Boolean setPlaintext(String userText) {
-        // Validate user input before setting
-        if (!userText.equals("")) {
-
-            if (userText.matches("[a-zA-Z]+")) {
-                this.mPlaintext = userText;
-                return true;
-            } else {
-                return false;
-            }
-
-        } else {
-            return false;
-        }
-
+    public void setPlaintext(String userText) {
+        // Set the user message
+        this.mPlaintext = userText;
     }
-
-
 
     //setter
     public  Boolean setKey(Integer key){
@@ -52,23 +40,39 @@ public Encoding(String plaintext,Integer key){
 
         mEncrypted_Message = "";
         for (int i = 0; i < mPlaintext.length(); i++) {
-            mAlphabet = mPlaintext.charAt(i);
 
-            if (mAlphabet >= 'a' && mAlphabet <= 'z') {
-                mAlphabet = (char) (mAlphabet + mKey);
+            // mAlphabet
+            String mplainIndex = String.valueOf(mPlaintext.charAt(i));
+            if (mplainIndex.matches("[a-zA-Z]+")) {
+                mEncyptedChar = (char) (mPlaintext.charAt(i) + mKey);
+                if (mplainIndex.matches("[a-z]+")) {
+                    if (mEncyptedChar > 'z') {
+                        mEncrypted_Message += (char) (mPlaintext.charAt(i) - (26 - mKey));
+                    }
+                   else{
+                            mEncrypted_Message += mEncyptedChar;
+                        }
 
-                if (mAlphabet > 'z') {
-                    mAlphabet = (char) (mAlphabet - 'z' + 'a' - 1);
+                    } else if (mplainIndex.matches("[A-Z]+")) {
+                        if (mEncyptedChar > 'Z') {
+                            mEncrypted_Message += (char) (mPlaintext.charAt(i) - (26 - mKey));
+                        }
+                       else{
+                                mEncrypted_Message += mEncyptedChar;
+                            }
+                        }
+                    } else {
+                        mEncrypted_Message += mPlaintext.charAt(i);
+                    }
+
                 }
-
-                mEncrypted_Message += mAlphabet;
-            } else {
-                mEncrypted_Message += mAlphabet;
+                return mEncrypted_Message;
             }
-        }
-        return mEncrypted_Message;
-    }
-}
+           }
+
+
+
+
 
 
 
